@@ -1,6 +1,8 @@
 package org.fxmisc.richtext;
 
 import java.util.Collection;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,6 +15,8 @@ import org.fxmisc.richtext.model.EditableStyledDocument;
  */
 public class CodeArea extends StyleClassedTextArea {
 
+    public static int DEFAULT_TAB_SIZE = 4;
+
     {
         getStyleClass().add("code-area");
 
@@ -22,7 +26,7 @@ public class CodeArea extends StyleClassedTextArea {
         // don't apply preceding style to typed text
         setUseInitialStyleForInsertion(true);
     }
-    
+
     /**
      * Creates an area that can render and edit the same {@link EditableStyledDocument} as another {@link CodeArea}.
      */

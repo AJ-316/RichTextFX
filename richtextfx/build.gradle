@@ -15,7 +15,7 @@ plugins {
 }
 
 javafx {
-    version = '11'
+    version = '24'
     modules = [ 'javafx.controls', 'javafx.fxml']
     def taskNames = gradle.getStartParameter().getTaskNames()
     // Prevent pom & module.json from containing JavaFX runtime dependencies
@@ -26,7 +26,7 @@ javafx {
 
 // OSGi bundle is configured through the bnd.bnd file
 
-group = 'org.fxmisc.richtext'
+group = 'com.fxaj.richtext'
 
 testSets {
     integrationTest { dirName = 'integrationTest' }
@@ -184,18 +184,19 @@ publishing {
     publications {
         richTextFX(MavenPublication) {
             from components.java
+            artifactId = 'richtextfx-custom'
             artifact sourcesJar
             artifact javadocJar
             pom {
-                name = 'RichTextFX'
+                name = 'RichTextFX Custom (AJ-316 Fork)'
                 packaging = 'jar'
-                description = 'Rich-text area for JavaFX'
-                url = 'https://github.com/FXMisc/RichTextFX/#richtextfx'
+                description = 'RichTextFX fork with custom tab size support'
+                url = 'https://github.com/AJ-316/RichTextFX'
            
                 scm {
-                    url = 'scm:git@github.com:FXMisc/RichTextFX.git'
-                    connection = 'scm:git@github.com:FXMisc/RichTextFX.git'
-                    developerConnection = 'scm:git@github.com:FXMisc/RichTextFX.git'
+                    url = 'https://github.com/AJ-316/RichTextFX'
+                    connection = 'scm:git@github.com:AJ-316/RichTextFX.git'
+                    developerConnection = 'scm:git@github.com:AJ-316/RichTextFX.git'
                 }
            
                 licenses {
@@ -204,16 +205,14 @@ publishing {
                         url = 'http://opensource.org/licenses/BSD-2-Clause'
                         distribution = 'repo'
                     }
-                    license {
-                        name = 'GPLv2 with the Classpath Exception'
-                        url = 'http://www.gnu.org/software/classpath/license.html'
-                        distribution = 'repo'
-                    }
                 }
            
                 developers {
                     developer {
                         name = 'Tomas Mikula'
+                    }
+                    developer {
+                        name = 'AJ-316'
                     }
                 }
             }

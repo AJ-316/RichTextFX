@@ -325,6 +325,10 @@ public class GenericStyledArea<PS, SEG, S> extends Region
      *                                                                        *
      * ********************************************************************** */
 
+    private int tabSize;
+    public void setTabSize(int tabSize) { this.tabSize = tabSize; }
+    public int getTabSize() { return tabSize; }
+
     /**
      * Text color for highlighted text.
      */
@@ -1914,7 +1918,7 @@ public class GenericStyledArea<PS, SEG, S> extends Region
             BiConsumer<TextFlow, PS> applyParagraphStyle,
             Function<StyledSegment<SEG, S>, Node> nodeFactory) {
 
-        ParagraphBox<PS, SEG, S> box = new ParagraphBox<>(paragraph, applyParagraphStyle, nodeFactory);
+        ParagraphBox<PS, SEG, S> box = new ParagraphBox<>(paragraph, applyParagraphStyle, nodeFactory, tabSize);
 
         box.highlightTextFillProperty().bind(highlightTextFill);
         box.wrapTextProperty().bind(wrapTextProperty());

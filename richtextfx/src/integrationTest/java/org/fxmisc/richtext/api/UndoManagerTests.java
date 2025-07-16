@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import org.fxmisc.richtext.CodeArea;
 import org.fxmisc.richtext.InlineCssTextAreaAppTest;
 import org.fxmisc.richtext.RichTextFXTestBase;
 import org.fxmisc.richtext.StyledTextArea;

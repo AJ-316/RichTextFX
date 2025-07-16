@@ -1,6 +1,7 @@
 package org.fxmisc.richtext;
 
 import java.util.function.BiConsumer;
+import java.util.function.Supplier;
 
 import javafx.beans.NamedArg;
 import javafx.geometry.VPos;
@@ -53,7 +54,8 @@ public class StyledTextArea<PS, S> extends GenericStyledArea<PS, String, S> {
                           @NamedArg("applyStyle")            BiConsumer<? super TextExt, S> applyStyle,
                           @NamedArg("document")              EditableStyledDocument<PS, String, S> document) {
         this(initialParagraphStyle, applyParagraphStyle,
-             initialTextStyle, applyStyle, document, true);
+             initialTextStyle, applyStyle, document, true
+        );
     }
 
     public StyledTextArea(@NamedArg("initialParagraphStyle") PS initialParagraphStyle,
@@ -78,6 +80,7 @@ public class StyledTextArea<PS, S> extends GenericStyledArea<PS, String, S> {
              initialTextStyle, applyStyle, true);
     }
 
+
     /**
      * Creates a {@link TextExt} node using the given styled text.
      */
@@ -85,6 +88,7 @@ public class StyledTextArea<PS, S> extends GenericStyledArea<PS, String, S> {
                                                 BiConsumer<? super TextExt, S> applyStyle) {
         return createStyledTextNode(seg.getSegment(), seg.getStyle(), applyStyle);
     }
+
 
     /**
      * Creates a {@link TextExt} node using the given styled text.

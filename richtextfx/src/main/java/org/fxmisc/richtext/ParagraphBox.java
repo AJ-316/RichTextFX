@@ -93,9 +93,11 @@ class ParagraphBox<PS, SEG, S> extends Region {
     }
 
     ParagraphBox(Paragraph<PS, SEG, S> par, BiConsumer<TextFlow, PS> applyParagraphStyle,
-                 Function<StyledSegment<SEG, S>, Node> nodeFactory) {
+                 Function<StyledSegment<SEG, S>, Node> nodeFactory, int tabSize) {
         this.getStyleClass().add("paragraph-box");
         this.text = new ParagraphText<>(par, nodeFactory);
+        this.text.setTabSize(tabSize);
+
         applyParagraphStyle.accept(this.text, par.getParagraphStyle());
         isFolded = Val.wrap( text.visibleProperty().not() );
         

@@ -75,6 +75,7 @@ public class XMLEditorDemo extends Application {
     public void start(Stage primaryStage) {
         CodeArea codeArea = new CodeArea();
         codeArea.setParagraphGraphicFactory(LineNumberFactory.get(codeArea));
+		codeArea.setTabSize(2);
 
         codeArea.textProperty().addListener((obs, oldText, newText) -> {
             codeArea.setStyleSpans(0, computeHighlighting(newText));

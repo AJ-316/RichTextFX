@@ -4,7 +4,7 @@ plugins {
 }
 
 javafx {
-    version = '11'
+    version = '24'
     modules = [ 'javafx.controls']
 }
 
