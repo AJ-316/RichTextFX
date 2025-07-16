@@ -1,6 +1,40 @@
 
-RichTextFX  
+RichTextFX - AJ-316 Fork
 ==========
+
+**This repository is a fork of [RichTextFX](https://github.com/FXMisc/RichTextFX).**  
+Original authorship and licensing retained.
+
+Highlights in this Fork
+---------------
+
+- Custom tab size support implemented in `GenericStyledArea`
+- Adds per-instance tab size support to `CodeArea`
+- Requires reconstruction of format after changing tab size
+- Updated JavaFX version to 24 for modern compatibility
+
+Download
+--------
+
+This fork is not published on Maven Central. Download the JARs from the [release page](https://github.com/AJ-316/RichTextFX/releases/tag/v1.0.0-AJ316).
+- [richtextfx-custom-1.0.0-AJ316.jar](https://github.com/AJ-316/RichTextFX/releases/download/v1.0.0-AJ316/richtextfx-custom-1.0.0-AJ316.jar)
+- [richtextfx-custom-1.0.0-AJ316-sources.jar](https://github.com/AJ-316/RichTextFX/releases/download/v1.0.0-AJ316/richtextfx-custom-1.0.0-AJ316-sources.jar)
+- [richtextfx-custom-1.0.0-AJ316-javadoc.jar](https://github.com/AJ-316/RichTextFX/releases/download/v1.0.0-AJ316/richtextfx-custom-1.0.0-AJ316-javadoc.jar)
+
+Requirements - **For this Fork**
+------------
+- JDK 17 or higher (Preferred JDK 21)
+- **JavaFX 24**  
+  (Not compatible with older JavaFX versions)
+> **Note:** The requirements below refer to the original library.
+
+\
+**Original project**: [FXMisc/RichTextFX](https://github.com/FXMisc/RichTextFX)  
+License: BSD-2-Clause OR GPLv2 with Classpath Exception
+
+> The remainder of this README is the original README from FXMisc for reference and usage details.
+
+---
 
 RichTextFX provides a memory-efficient text area for JavaFX that allows the developer to style ranges of text, display custom objects in-line (no more `HTMLEditor`), and override specific default behaviors only where necessary.
 
@@ -160,9 +194,9 @@ Current stable release is 0.11.5 which is ONLY compatible with Java 11 and UP.
 
 #### Maven coordinates
 
-| Group ID            | Artifact ID | Version |
-| :-----------------: | :---------: | :-----: |
-| org.fxmisc.richtext | richtextfx  | 0.11.5  |
+| Group ID            | Artifact ID         | Version         |
+| :-----------------: | :-----------------: | :-------------: |
+| org.fxmisc.richtext | richtextfx          | 0.11.5          |
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.fxmisc.richtext/richtextfx/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.fxmisc.richtext/richtextfx)
 
