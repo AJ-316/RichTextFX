@@ -11,7 +11,7 @@ Highlights in this Fork
 - Custom tab size support implemented in `GenericStyledArea`
 - Adds per-instance tab size support to `CodeArea`
 - Requires reconstruction of format after changing tab size
-- Updated JavaFX version to 24 for modern compatibility
+- Updated JavaFX version to 21 for modern compatibility
 
 Download
 --------
@@ -23,9 +23,8 @@ This fork is not published on Maven Central. Download the JARs from the [release
 
 Requirements - **For this Fork**
 ------------
-- JDK 17 or higher (Preferred JDK 21)
-- **JavaFX 24**  
-  (Not compatible with older JavaFX versions)
+- JDK 21 or higher (Preferred JDK 21)
+- **JavaFX 21**
 > **Note:** The requirements below refer to the original library.
 
 \
