@@ -16,10 +16,8 @@ Highlights in this Fork
 Download
 --------
 
-This fork is not published on Maven Central. Download the JARs from the [release page](https://github.com/AJ-316/RichTextFX/releases/tag/v1.0.0-AJ316).
+This fork is not published on Maven Central. Download the JAR from the [release page](https://github.com/AJ-316/RichTextFX/releases/tag/v1.0.0-AJ316).
 - [richtextfx-custom-1.0.0-AJ316.jar](https://github.com/AJ-316/RichTextFX/releases/download/v1.0.0-AJ316/richtextfx-custom-1.0.0-AJ316.jar)
-- [richtextfx-custom-1.0.0-AJ316-sources.jar](https://github.com/AJ-316/RichTextFX/releases/download/v1.0.0-AJ316/richtextfx-custom-1.0.0-AJ316-sources.jar)
-- [richtextfx-custom-1.0.0-AJ316-javadoc.jar](https://github.com/AJ-316/RichTextFX/releases/download/v1.0.0-AJ316/richtextfx-custom-1.0.0-AJ316-javadoc.jar)
 
 Requirements - **For this Fork**
 ------------
