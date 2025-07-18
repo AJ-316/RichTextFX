@@ -4,7 +4,7 @@ plugins {
 }
 
 javafx {
-    version = '24'
+    version = '21'
     modules = [ 'javafx.controls']
 }
 
@@ -34,7 +34,7 @@ task fatJar(type: Jar, dependsOn: classes) {
     // avoid implicit dependency warning since we use output from the lib projects
     // See  https://docs.gradle.org/7.0.2/userguide/validation_problems.html#implicit_dependency
     dependsOn ":richtextfx:jar"
-
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     archiveAppendix = 'fat'
     excludes = [ 'module-info.class',  // block module-info files from other jars
         '*.dll','javafx*','javafx/',   // block inclusion of javafx files

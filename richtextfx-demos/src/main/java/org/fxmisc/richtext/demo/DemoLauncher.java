@@ -59,9 +59,9 @@ public class DemoLauncher {
     private final static String[] noArgs = new String[0];
 
     public static void main(String[] args) {
-        if (args.length == 0) {
-            demoMap.entrySet().forEach(e -> System.out.printf("%s - %s\n", e.getKey(), e.getValue().get1()));
-        } else {
+        args = new String[]{"JavaKeywordsDemo"};
+        demoMap.entrySet().forEach(e -> System.out.printf("%s - %s\n", e.getKey(), e.getValue().get1()));
+        if (args.length != 0) {
             final Tuple2<String, Consumer<String[]>> demoData = demoMap.get(args[0]);
         	if (demoData == null) {
         		System.err.printf("No such demo: %s", args[0]);

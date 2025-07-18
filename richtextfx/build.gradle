@@ -15,7 +15,7 @@ plugins {
 }
 
 javafx {
-    version = '24'
+    version = '21'
     modules = [ 'javafx.controls', 'javafx.fxml']
     def taskNames = gradle.getStartParameter().getTaskNames()
     // Prevent pom & module.json from containing JavaFX runtime dependencies
@@ -73,7 +73,7 @@ javadoc {
     options.links = [
         // resolve links to Java and JavaFX Javadocs
         'https://docs.oracle.com/en/java/javase/11/docs/api/',
-        'https://openjfx.io/javadoc/11/',
+        'https://openjfx.io/javadoc/17/',
 
         // resolve links to ReactFX
         'https://www.javadoc.io/doc/org.reactfx/reactfx/2.0-M5/',
@@ -227,6 +227,7 @@ if(doUploadArchives) {
 }
 
 task fatJar(type: Jar, dependsOn: classes) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     archiveAppendix = 'fat'
     manifest.attributes( 'Automatic-Module-Name': 'org.fxmisc.richtext' )
     from sourceSets.main.output

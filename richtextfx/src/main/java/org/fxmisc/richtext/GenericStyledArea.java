@@ -325,7 +325,7 @@ public class GenericStyledArea<PS, SEG, S> extends Region
      *                                                                        *
      * ********************************************************************** */
 
-    private int tabSize;
+    private int tabSize = CodeArea.DEFAULT_TAB_SIZE;
     public void setTabSize(int tabSize) { this.tabSize = tabSize; }
     public int getTabSize() { return tabSize; }
 
